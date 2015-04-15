@@ -1,0 +1,13 @@
+fps paintball game
+https://en.wikipedia.org/wiki/Paintball
+
+slightly futuristic/fantasy style
+indoor paintball only to simplify level design
+has rpg elements (upgrading and buying new weapons)
+-> about 4-5 weapons and customizeable characters
+
+Ball hit results in Texture paint maybe. Texture get's painted with a splat of the players color. (Check panda3d texturing and texture painting)
+-> Take a look at tagger from drwr which should have good samples and even the functionality we like to have.
+
+use simple fps styled controll, maybe include bullet enhanced char controller as used in rising or stay completely with p3d's own collision and physics system.
+
