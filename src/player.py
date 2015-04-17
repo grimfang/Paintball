@@ -4,23 +4,31 @@ from panda3d.core import CollisionSphere
 from panda3d.core import CollisionRay
 from panda3d.core import CollisionNode
 from panda3d.core import CollisionHandlerFloor
+from direct.actor.Actor import Actor
 from hud import HUD
 from gun import Gun
 
 class Player(DirectObject):
     def __init__(self):
         # Player Model setup
-        self.player = loader.loadModel("smiley")
+        #self.player = loader.loadModel("Player")
+        self.player = Actor("Player",
+                            {"Run":"Player-Run",
+                            "Idle":"Player-Idle"})
+        self.player.setBlend(frameBlend = True)
         self.player.setPos(0, 0, 0)
         self.player.reparentTo(render)
         self.player.hide()
+
+        #self.Head = self.player.controlJoint(None,"modelRoot","Head")
+        self.TorsorControl = self.player.controlJoint(None,"modelRoot","Torsor")
 
         # setup the collision detection
         # wall and object collision
         self.playerSphere = CollisionSphere(0, 0, 0, 1)
         self.playerCollision = self.player.attachNewNode(CollisionNode("playerCollision"))
         self.playerCollision.node().addSolid(self.playerSphere)
-        self.playerCollision.show()
+        #self.playerCollision.show()
         base.pusher.addCollider(self.playerCollision, self.player)
         base.cTrav.addCollider(self.playerCollision, base.pusher)
         # foot (walk) collision
@@ -32,9 +40,10 @@ class Player(DirectObject):
         base.cTrav.addCollider(self.playerFootRay, self.lifter)
 
         # Player weapon setup
+        self.gunAttach = self.player.exposeJoint(None, "modelRoot", "WeaponSlot_R")
         self.color = LPoint3f(0, 0, 1)
         self.gun = Gun()
-        self.gun.reparentTo(camera)
+        self.gun.reparentTo(self.gunAttach)
         self.gun.hide()
         self.gun.setColor(self.color)
 
@@ -53,9 +62,8 @@ class Player(DirectObject):
         self.movespeed = 5.0
 
         # Player camera setup
-        camera.setH(180)
-        camera.reparentTo(self.player)
-        camera.setZ(self.player, 2)
+        self.Eyes = self.player.exposeJoint(None, "modelRoot", "Eyes")
+        camera.reparentTo(self.Eyes)
         base.camLens.setFov(90)
         base.camLens.setNear(0.001)
 
@@ -114,12 +122,12 @@ class Player(DirectObject):
         mouseY = pointer.getY()
 
         if base.win.movePointer(0, self.winXhalf, self.winYhalf):
-            p = camera.getP() - (mouseY - self.winYhalf) * self.mouseSpeedY
+            p = self.TorsorControl.getP() + (mouseY - self.winYhalf) * self.mouseSpeedY
             if p <-80:
                 p = -80
             elif p > 90:
                 p = 90
-            camera.setP(p)
+            self.TorsorControl.setP(p)
 
             h = self.player.getH() - (mouseX - self.winXhalf) * self.mouseSpeedX
             if h <-360:
@@ -128,13 +136,24 @@ class Player(DirectObject):
                 h = -360
             self.player.setH(h)
 
+
         if self.keyMap["left"] != 0:
             self.player.setX(self.player, self.movespeed * globalClock.getDt())
         if self.keyMap["right"] != 0:
             self.player.setX(self.player, -self.movespeed * globalClock.getDt())
         if self.keyMap["forward"] != 0:
+            if self.player.getCurrentAnim() != "Run":
+                self.player.loop("Run")
+                self.player.setPlayRate(5, "Run")
             self.player.setY(self.player, -self.movespeed * globalClock.getDt())
+        else:
+            self.player.stop("Run")
         if self.keyMap["backward"] != 0:
             self.player.setY(self.player, self.movespeed * globalClock.getDt())
+
+        if not (self.keyMap["left"] or self.keyMap["right"] or
+                self.keyMap["forward"] or self.keyMap["backward"] or
+                self.player.getCurrentAnim() == "Idle"):
+            self.player.loop("Idle")
 
         return task.cont

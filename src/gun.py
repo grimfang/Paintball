@@ -3,7 +3,9 @@ from bullet import Bullet
 class Gun:
     def __init__(self):
         self.model = loader.loadModel("Marker")
-        self.model.setPos(0.8, 1, -0.5)
+        #self.model.setPos(0.8, 1, -0.5)
+        self.model.setR(-90)
+        self.model.setScale(0.5)
 
         self.maxAmmunition = 40
         self.ammunition = 40
