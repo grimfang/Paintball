@@ -15,6 +15,9 @@
 <Texture> Bullet {
   "./Bullet.png"
   <Scalar> envtype { MODULATE }
+  <Scalar> minfilter { LINEAR_MIPMAP_LINEAR }
+  <Scalar> magfilter { LINEAR_MIPMAP_LINEAR }
+  <Scalar> wrap { REPEAT }
 }
 
   <Group> Sphere {
@@ -1089,13 +1092,11 @@
     
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.654654 0.377964 0.654654}
       <VertexRef> { 0 1 2 3 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.654654 0.377964 -0.654654}
@@ -1103,13 +1104,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 0.755929 0.654654}
       <VertexRef> { 8 9 10 11 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 0.755929 -0.654654}
@@ -1117,13 +1116,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 0.974117 -0.226045}
       <VertexRef> { 16 17 18 19 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 0.974117 0.226045}
@@ -1131,13 +1128,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.843610 0.487058 -0.226045}
       <VertexRef> { 24 25 26 27 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.843610 0.487058 0.226045}
@@ -1145,13 +1140,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.654654 0.377964 0.654654}
       <VertexRef> { 32 33 34 35 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.654654 0.377964 -0.654654}
@@ -1159,13 +1152,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.654654 -0.377964 -0.654654}
       <VertexRef> { 40 41 42 43 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.843610 -0.487058 -0.226045}
@@ -1173,13 +1164,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.843610 -0.487058 0.226045}
       <VertexRef> { 48 49 50 51 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.654654 -0.377964 0.654654}
@@ -1187,13 +1176,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 -0.974117 0.226045}
       <VertexRef> { 56 57 58 59 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 -0.755929 0.654654}
@@ -1201,13 +1188,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 -0.755929 -0.654654}
       <VertexRef> { 64 65 66 67 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 -0.974117 -0.226045}
@@ -1215,13 +1200,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.843610 0.487058 0.226045}
       <VertexRef> { 72 73 74 75 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.255977 0.147788 -0.955319}
@@ -1229,13 +1212,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.255977 0.147788 0.955319}
       <VertexRef> { 79 80 81 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.843610 0.487058 -0.226045}
@@ -1243,13 +1224,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 0.295577 -0.955319}
       <VertexRef> { 86 87 88 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 0.295577 0.955319}
@@ -1257,13 +1236,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.255977 0.147788 -0.955319}
       <VertexRef> { 92 93 94 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.255977 0.147788 0.955319}
@@ -1271,13 +1248,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.255977 -0.147788 -0.955319}
       <VertexRef> { 98 99 100 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.255977 -0.147788 0.955319}
@@ -1285,13 +1260,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 -0.295577 -0.955319}
       <VertexRef> { 104 105 106 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {0.000000 -0.295577 0.955319}
@@ -1299,13 +1272,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.654654 -0.377965 -0.654654}
       <VertexRef> { 110 111 112 113 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.843610 -0.487058 -0.226045}
@@ -1313,13 +1284,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.843610 -0.487059 0.226045}
       <VertexRef> { 118 119 120 121 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.654654 -0.377965 0.654654}
@@ -1327,13 +1296,11 @@
     }
     <Polygon> {
       <TRef> { Bullet }
-      <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.255977 -0.147788 -0.955319}
       <VertexRef> { 126 127 128 <Ref> { Sphere }}
     }
     <Polygon> {
-      <TRef> { Bullet }
       <TRef> { Bullet }
       <MRef> { Bullet }
       <Normal> {-0.255977 -0.147788 0.955319}

@@ -13,8 +13,8 @@ class Bullet(DirectObject):
         self.color = color
         self.playerID = playerID
 
-        self.bulletNP = NodePath("Bullet-%02d" % id(self))
-        self.bulletAN = ActorNode("bullet-physics-%02d" % id(self))
+        self.bulletNP = NodePath("Bullet-%d" % id(self))
+        self.bulletAN = ActorNode("bullet-physics-%d" % id(self))
         # set the mass of the ball to 3.3g = average weight of a paintball
         self.bulletAN.getPhysicsObject().setMass(0.033)
         self.bulletANP = self.bulletNP.attachNewNode(self.bulletAN)
@@ -33,29 +33,32 @@ class Bullet(DirectObject):
         self.bulletSphere = CollisionSphere(0, 0, 0, 0.0173*2)
         self.bulletCollision = self.bulletANP.attachNewNode(CollisionNode("bulletCollision-%02d" % id(self)))
         self.bulletCollision.node().addSolid(self.bulletSphere)
-        self.bulletCollision.show()
+        #self.bulletCollision.show()
         base.physicpusher.addCollider(self.bulletCollision, self.bulletANP)
         base.cTrav.addCollider(self.bulletCollision, base.physicpusher)
 
-    def shoot(self, pos):
+    def shoot(self, pos, shootVec=None):
+        if shootVec != None:
+            v = shootVec
+            v *= 214.0
+        else:
+            # Get from/to points from mouse click
+            pMouse = base.mouseWatcherNode.getMouse()
+            pFrom = Point3()
+            pTo = Point3()
+            base.camLens.extrude(pMouse, pFrom, pTo)
 
-        # Get from/to points from mouse click
-        pMouse = base.mouseWatcherNode.getMouse()
-        pFrom = Point3()
-        pTo = Point3()
-        base.camLens.extrude(pMouse, pFrom, pTo)
+            pFrom = render.getRelativePoint(base.cam, pFrom)
+            pTo = render.getRelativePoint(base.cam, pTo)
 
-        pFrom = render.getRelativePoint(base.cam, pFrom)
-        pTo = render.getRelativePoint(base.cam, pTo)
-
-        # Calculate initial velocity
-        v = pTo - pFrom
-        v.normalize()
-        v *= 214.0
+            # Calculate initial velocity
+            v = pTo - pFrom
+            v.normalize()
+            v *= 214.0
 
         self.bulletNP.setPos(pos)
         self.bulletNP.reparentTo(render)
-        self.bulletFN = ForceNode("Bullet-force-%02d" % id(self))
+        self.bulletFN = ForceNode("Bullet-force-%d" % id(self))
         self.bulletFNP = self.bulletNP.attachNewNode(self.bulletFN)
         # speed of a paintball when he leafes the muzzle: 214 fps
         self.lvf = LinearVectorForce(v)
@@ -63,18 +66,21 @@ class Bullet(DirectObject):
         self.bulletFN.addForce(self.lvf)
         self.bulletAN.getPhysical(0).addLinearForce(self.lvf)
 
-        self.accept("bulletCollision-%02d-hit" % id(self), self.bulletHit)
-
+        self.accept("bulletCollision-%d-hit" % id(self), self.bulletHit)
         taskMgr.doMethodLater(
             2,
             self.doRemove,
-            'doRemove-%02d' % id(self),
+            'doRemove-%d' % id(self),
             appendTask=True)
 
     def doRemove(self, task):
         self.bulletNP.removeNode()
+        self.bulletAN.getPhysical(0).removeLinearForce(self.lvf)
         return task.done
 
     def bulletHit(self, entry):
-        self.bulletNP.removeNode()
-        self.bulletAN.getPhysical(0).removeLinearForce(self.lvf)
+        hitPlayerName = entry.getIntoNode().getName()
+        if str(self.playerID) not in hitPlayerName:
+            base.messenger.send("Bulet-hit-%s" % hitPlayerName)
+            self.bulletNP.removeNode()
+            self.bulletAN.getPhysical(0).removeLinearForce(self.lvf)

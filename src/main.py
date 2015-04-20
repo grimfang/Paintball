@@ -30,7 +30,6 @@ class Main(ShowBase):
         self.accept("quit", sys.exit)
         self.accept("start", lambda: self.fsmGame.request("Singleplayer"))
 
-
         # Start physic simulation
         self.enableParticles()
 
@@ -44,7 +43,6 @@ class Main(ShowBase):
         # enable collision handling
         traverser = CollisionTraverser("base collision traverser")
         base.cTrav = traverser
-        #base.cTrav.showCollisions(render)
         base.cTrav.setRespectPrevTransform(True)
         base.physicpusher = PhysicsCollisionHandler()
         base.physicpusher.addInPattern("%fn-hit")
@@ -54,6 +52,30 @@ class Main(ShowBase):
         self.fsmGame = FSMGame()
         # Beginn with the menu
         self.fsmGame.request("Menu")
+
+        if __debug__:
+            def toggleOobe():
+                """Switch between free camera (steering with the mouse) and
+                the camera controled by the game"""
+                self.oobe()
+            def explorer():
+                """activates the Panda3D halp tool to explore the
+                render Nodepath"""
+                APP.render.explore()
+            def toggleFullscreen():
+                """Toggles the window between fullscreen and windowed mode"""
+                graphicMgr.setFullscreen(not settings.fullscreen)
+            def toggleWireframe():
+                """Switch between wired model view and normal view"""
+                base.toggleWireframe()
+            def showCollisions():
+                """Render collision solids"""
+                base.cTrav.showCollisions(render)
+            self.accept("f8", showCollisions)
+            self.accept("f9", toggleOobe)
+            self.accept("f10", explorer)
+            self.accept("f11", toggleFullscreen)
+            self.accept("f12", toggleWireframe)
 
     def escape(self):
         if self.fsmGame.state == "Menu":

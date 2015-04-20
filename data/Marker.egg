@@ -15,15 +15,18 @@
 <Texture> Marker {
   "./Marker.png"
   <Scalar> envtype { MODULATE }
+  <Scalar> minfilter { LINEAR_MIPMAP_LINEAR }
+  <Scalar> magfilter { LINEAR_MIPMAP_LINEAR }
+  <Scalar> wrap { REPEAT }
 }
 
   <Group> BulletStart {
     <Transform> {
       <Matrix4> {
-        0.062132 0.000000 0.000000 0.000000 
-        0.000000 0.000000 -0.062132 0.000000 
-        -0.000000 0.062132 0.000000 0.000000 
-        0.000000 1.096000 0.214000 1.000000 
+        1.000000 0.000000 0.000000 0.000000 
+        0.000000 0.000000 -1.000000 0.000000 
+        -0.000000 1.000000 0.000000 0.000000 
+        0.000291 1.099761 0.214778 1.000000 
       }
     }
     
@@ -17948,13 +17951,11 @@
     
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923880 0.000000 -0.382683}
       <VertexRef> { 0 1 2 3 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.000000 1.000000 0.000000}
@@ -17962,13 +17963,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.000000 1.000000 0.000000}
       <VertexRef> { 8 9 10 11 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.000000 1.000000 0.000000}
@@ -17976,13 +17975,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.000000 1.000000 0.000000}
       <VertexRef> { 16 17 18 19 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.000000 1.000000 0.000000}
@@ -17990,13 +17987,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382700 0.000000 0.923873}
       <VertexRef> { 24 25 26 27 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382676 0.000001 0.923882}
@@ -18004,13 +17999,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923880 0.000000 -0.382683}
       <VertexRef> { 32 33 34 35 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923881 0.000000 0.382680}
@@ -18018,13 +18011,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382666 0.000000 -0.923887}
       <VertexRef> { 40 41 42 43 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923881 0.000000 -0.382680}
@@ -18032,13 +18023,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382666 0.000000 -0.923887}
       <VertexRef> { 48 49 50 51 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382676 -0.000001 -0.923882}
@@ -18046,13 +18035,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382700 0.000000 0.923873}
       <VertexRef> { 56 57 58 59 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.000000 1.000000 0.000000}
@@ -18060,13 +18047,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382676 -0.000001 -0.923882}
       <VertexRef> { 64 65 66 67 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923880 0.000000 0.382683}
@@ -18074,13 +18059,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.000000 1.000000 0.000000}
       <VertexRef> { 72 73 74 75 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923881 0.000000 -0.382680}
@@ -18088,13 +18071,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.000000 1.000000 0.000000}
       <VertexRef> { 80 81 82 83 84 85 86 87 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382676 0.000001 0.923882}
@@ -18102,13 +18083,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923881 0.000000 0.382680}
       <VertexRef> { 92 93 94 95 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923880 0.000000 0.382683}
@@ -18116,13 +18095,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.000000 1.000000 0.000000}
       <VertexRef> { 100 101 102 103 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.374686 0.203434 0.904558}
@@ -18130,13 +18107,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.374686 0.203434 0.904558}
       <VertexRef> { 108 109 110 111 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.904561 0.203435 0.374678}
@@ -18144,13 +18119,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.904561 0.203435 -0.374678}
       <VertexRef> { 116 117 118 119 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.374664 0.203434 -0.904567}
@@ -18158,13 +18131,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.374664 0.203434 -0.904567}
       <VertexRef> { 124 125 126 127 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.904561 0.203435 -0.374678}
@@ -18172,13 +18143,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.904561 0.203435 0.374678}
       <VertexRef> { 132 133 134 135 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.917906 0.113540 0.380207}
@@ -18186,13 +18155,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.917906 0.113540 0.380207}
       <VertexRef> { 140 141 142 143 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.917906 0.113540 -0.380207}
@@ -18200,13 +18167,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.380214 0.113538 0.917903}
       <VertexRef> { 148 149 150 151 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.380193 0.113538 -0.917912}
@@ -18214,13 +18179,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.380193 0.113538 -0.917912}
       <VertexRef> { 156 157 158 159 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.380214 0.113538 0.917903}
@@ -18228,13 +18191,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.917906 0.113540 -0.380207}
       <VertexRef> { 164 165 166 167 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923880 0.000000 -0.382682}
@@ -18242,13 +18203,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382687 0.000000 0.923878}
       <VertexRef> { 172 173 174 175 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382668 0.000000 -0.923886}
@@ -18256,13 +18215,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382668 0.000000 -0.923886}
       <VertexRef> { 180 181 182 183 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382687 0.000000 0.923878}
@@ -18270,13 +18227,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923880 0.000000 -0.382682}
       <VertexRef> { 188 189 190 191 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923880 0.000000 0.382682}
@@ -18284,13 +18239,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923880 0.000000 0.382682}
       <VertexRef> { 196 197 198 199 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.371136 0.243828 0.895994}
@@ -18298,13 +18251,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.895997 0.243827 -0.371132}
       <VertexRef> { 204 205 206 207 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.895997 0.243827 0.371132}
@@ -18312,13 +18263,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.895997 0.243827 0.371132}
       <VertexRef> { 212 213 214 215 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.895997 0.243827 -0.371132}
@@ -18326,13 +18275,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.371136 0.243828 0.895994}
       <VertexRef> { 220 221 222 223 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.371119 0.243828 -0.896001}
@@ -18340,13 +18287,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.371119 0.243828 -0.896001}
       <VertexRef> { 228 229 230 231 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923881 0.000000 0.382681}
@@ -18354,13 +18299,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923881 0.000000 0.382681}
       <VertexRef> { 236 237 238 239 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923881 0.000000 -0.382681}
@@ -18368,13 +18311,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382686 0.000000 0.923879}
       <VertexRef> { 244 245 246 247 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382669 0.000000 -0.923885}
@@ -18382,13 +18323,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382669 0.000000 -0.923885}
       <VertexRef> { 252 253 254 255 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382686 0.000000 0.923879}
@@ -18396,13 +18335,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923881 0.000000 -0.382681}
       <VertexRef> { 260 261 262 263 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.363111 0.903750 0.226686}
@@ -18410,13 +18347,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.114588 0.954119 0.276636}
       <VertexRef> { 268 269 270 271 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.602711 0.790456 0.109168}
@@ -18424,13 +18359,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.602711 0.790457 0.109168}
       <VertexRef> { 276 277 278 279 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.114588 0.954119 0.276636}
@@ -18438,13 +18371,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.363111 0.903750 0.226686}
       <VertexRef> { 284 285 286 287 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.276639 0.954118 0.114587}
@@ -18452,13 +18383,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.276639 0.954118 0.114587}
       <VertexRef> { 292 293 294 295 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382673 0.000000 -0.923884}
@@ -18466,13 +18395,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382673 0.000000 -0.923884}
       <VertexRef> { 300 301 302 303 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382688 0.000000 0.923878}
@@ -18480,13 +18407,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.937952 0.000000 -0.346766}
       <VertexRef> { 308 309 310 311 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923880 0.000000 0.382681}
@@ -18494,13 +18419,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923880 0.000000 0.382681}
       <VertexRef> { 316 317 318 319 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.937952 0.000000 -0.346766}
@@ -18508,13 +18431,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382688 0.000000 0.923878}
       <VertexRef> { 324 325 326 327 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382688 0.000000 0.923878}
@@ -18522,13 +18443,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.937952 0.000000 -0.346766}
       <VertexRef> { 332 333 334 335 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923880 0.000000 0.382681}
@@ -18536,13 +18455,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923880 0.000000 0.382681}
       <VertexRef> { 340 341 342 343 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.937952 0.000000 -0.346766}
@@ -18550,13 +18467,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382688 0.000000 0.923878}
       <VertexRef> { 348 349 350 351 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923880 0.000000 0.382681}
@@ -18564,13 +18479,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382688 0.000000 0.923878}
       <VertexRef> { 356 357 358 359 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382688 0.000000 0.923878}
@@ -18578,13 +18491,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923880 0.000000 0.382681}
       <VertexRef> { 364 365 366 367 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.937952 0.000000 -0.346766}
@@ -18592,13 +18503,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.937952 0.000000 -0.346766}
       <VertexRef> { 372 373 374 375 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.510463 -0.797227 -0.322268}
@@ -18606,13 +18515,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.738758 -0.616932 -0.271352}
       <VertexRef> { 380 381 382 383 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.627337 -0.778748 0.000000}
@@ -18620,13 +18527,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.627039 -0.776940 -0.056452}
       <VertexRef> { 388 389 390 391 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.971686 -0.014346 0.235840}
@@ -18634,13 +18539,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.566554 0.738125 0.366317}
       <VertexRef> { 396 397 398 399 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.971686 -0.014346 0.235840}
@@ -18648,13 +18551,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.566554 0.738125 0.366317}
       <VertexRef> { 404 405 406 407 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.738333 -0.632915 -0.232986}
@@ -18662,13 +18563,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.650429 0.747795 -0.133211}
       <VertexRef> { 412 413 414 415 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.510463 -0.797227 -0.322268}
@@ -18676,13 +18575,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.991710 0.007745 -0.128266}
       <VertexRef> { 420 421 422 423 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.991710 0.007745 -0.128266}
@@ -18690,13 +18587,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.650429 0.747795 -0.133211}
       <VertexRef> { 428 429 430 431 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
@@ -18704,13 +18599,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
       <VertexRef> { 436 437 438 439 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.654705 0.755885 0.000000}
@@ -18718,13 +18611,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.627338 -0.778747 0.000000}
       <VertexRef> { 444 445 446 447 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.654705 0.755885 0.000000}
@@ -18732,13 +18623,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.627338 -0.778747 0.000000}
       <VertexRef> { 452 453 454 455 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.654324 0.754110 -0.056366}
@@ -18746,13 +18635,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.627039 -0.776940 -0.056452}
       <VertexRef> { 460 461 462 463 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.654324 0.754111 -0.056366}
@@ -18760,13 +18647,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.627040 -0.776939 -0.056452}
       <VertexRef> { 468 469 470 471 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.998671 0.000000 -0.051546}
@@ -18774,13 +18659,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.998671 0.000000 -0.051546}
       <VertexRef> { 476 477 478 479 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.627340 -0.778746 0.000000}
@@ -18788,13 +18671,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
       <VertexRef> { 484 485 486 487 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
@@ -18802,13 +18683,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.654706 0.755884 0.000000}
       <VertexRef> { 492 493 494 495 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.627337 -0.778748 0.000000}
@@ -18816,13 +18695,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.654706 0.755884 0.000000}
       <VertexRef> { 500 501 502 503 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.979388 0.000000 -0.201988}
@@ -18830,13 +18707,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.641205 0.735085 -0.220243}
       <VertexRef> { 508 509 510 511 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.738758 -0.616932 -0.271352}
@@ -18844,13 +18719,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.641205 0.735085 -0.220243}
       <VertexRef> { 516 517 518 519 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.246428 -0.311266 -0.917816}
@@ -18858,13 +18731,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.979388 0.000000 -0.201988}
       <VertexRef> { 524 525 526 527 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.937952 0.000000 -0.346766}
@@ -18872,13 +18743,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923880 0.000000 0.382681}
       <VertexRef> { 532 533 534 535 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.382688 0.000000 0.923878}
@@ -18886,13 +18755,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.382688 0.000000 0.923878}
       <VertexRef> { 540 541 542 543 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.627338 -0.778747 0.000000}
@@ -18900,13 +18767,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923880 0.000000 0.382681}
       <VertexRef> { 548 549 550 551 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.738333 -0.632915 -0.232986}
@@ -18914,13 +18779,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.937952 0.000000 -0.346766}
       <VertexRef> { 556 557 558 559 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.627338 -0.778747 0.000000}
@@ -18928,13 +18791,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.627040 -0.776939 -0.056452}
       <VertexRef> { 564 565 566 567 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.627340 -0.778745 0.000000}
@@ -18942,13 +18803,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.961176 -0.038556 -0.273230}
       <VertexRef> { 572 573 574 575 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.426350 -0.366634 -0.826925}
@@ -18956,13 +18815,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.426350 -0.366634 -0.826925}
       <VertexRef> { 580 581 582 583 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.910577 -0.413236 0.009246}
@@ -18970,13 +18827,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.934008 -0.065232 -0.351247}
       <VertexRef> { 588 589 590 591 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.910577 -0.413236 0.009246}
@@ -18984,13 +18839,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.934008 -0.065231 -0.351247}
       <VertexRef> { 596 597 598 599 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.457024 0.097473 0.884097}
@@ -18998,13 +18851,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.457024 0.097473 0.884097}
       <VertexRef> { 604 605 606 607 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923880 0.000000 0.382681}
@@ -19012,13 +18863,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.858530 -0.023491 -0.512224}
       <VertexRef> { 612 613 614 615 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.937952 0.000000 -0.346766}
@@ -19026,13 +18875,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.937952 0.000000 -0.346766}
       <VertexRef> { 620 621 622 623 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.858530 -0.023491 -0.512225}
@@ -19040,13 +18887,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923880 0.000000 0.382681}
       <VertexRef> { 628 629 630 631 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.926201 0.063047 0.371722}
@@ -19054,13 +18899,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.439305 0.011552 -0.898264}
       <VertexRef> { 636 637 638 639 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.439288 -0.050136 -0.896946}
@@ -19068,13 +18911,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.923880 0.000000 0.382681}
       <VertexRef> { 644 645 646 647 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.884362 -0.015143 -0.466556}
@@ -19082,13 +18923,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.439288 -0.050136 -0.896946}
       <VertexRef> { 652 653 654 655 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.937952 0.000000 -0.346766}
@@ -19096,13 +18935,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.937952 0.000000 -0.346766}
       <VertexRef> { 660 661 662 663 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.884362 -0.015143 -0.466557}
@@ -19110,13 +18947,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.923880 0.000000 0.382681}
       <VertexRef> { 668 669 670 671 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.794213 0.038147 -0.606441}
@@ -19124,13 +18959,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.926201 0.063047 0.371722}
       <VertexRef> { 676 677 678 679 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.794213 0.038147 -0.606441}
@@ -19138,13 +18971,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.936559 0.055234 -0.346129}
       <VertexRef> { 684 685 686 687 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.439305 0.011552 -0.898264}
@@ -19152,13 +18983,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.936559 0.055234 -0.346129}
       <VertexRef> { 692 693 694 695 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.544167 0.063621 0.836561}
@@ -19166,13 +18995,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.544167 0.063621 0.836561}
       <VertexRef> { 700 701 702 703 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.890976 0.178239 -0.417603}
@@ -19180,13 +19007,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.927469 0.015837 0.373565}
       <VertexRef> { 708 709 710 711 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.927469 0.015837 0.373565}
@@ -19194,13 +19019,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.937952 -0.000749 -0.346765}
       <VertexRef> { 716 717 718 719 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.937952 -0.000749 -0.346765}
@@ -19208,13 +19031,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.890974 0.178236 -0.417609}
       <VertexRef> { 724 725 726 727 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.794957 0.350601 -0.495098}
@@ -19222,13 +19043,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.794927 0.350632 -0.495125}
       <VertexRef> { 732 733 734 735 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.546636 -0.007676 0.837335}
@@ -19236,13 +19055,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.937156 -0.040452 -0.346558}
       <VertexRef> { 740 741 742 743 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.964750 -0.033115 -0.261076}
@@ -19250,13 +19067,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.942348 -0.039033 0.332350}
       <VertexRef> { 748 749 750 751 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.964749 -0.033114 -0.261079}
@@ -19264,13 +19079,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.546636 -0.007676 0.837335}
       <VertexRef> { 756 757 758 759 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.937056 -0.042944 -0.346528}
@@ -19278,13 +19091,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.942348 -0.039033 0.332350}
       <VertexRef> { 764 765 766 767 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.528520 -0.093867 0.843716}
@@ -19292,13 +19103,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.937156 -0.040452 -0.346558}
       <VertexRef> { 772 773 774 775 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.845110 -0.374798 -0.381202}
@@ -19306,13 +19115,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.952196 -0.054891 0.300517}
       <VertexRef> { 780 781 782 783 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.845110 -0.374798 -0.381202}
@@ -19320,13 +19127,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.528520 -0.093867 0.843716}
       <VertexRef> { 788 789 790 791 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.304078 -0.816325 -0.491070}
@@ -19334,13 +19139,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.952196 -0.054891 0.300517}
       <VertexRef> { 796 797 798 799 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.304078 -0.816325 -0.491070}
@@ -19348,13 +19151,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.937056 -0.042944 -0.346528}
       <VertexRef> { 804 805 806 807 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.433379 -0.158070 -0.887241}
@@ -19362,13 +19163,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.928491 -0.140937 -0.343573}
       <VertexRef> { 812 813 814 815 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.519930 -0.259707 0.813772}
@@ -19376,13 +19175,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.703650 -0.149254 -0.694694}
       <VertexRef> { 820 821 822 823 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.934853 -0.176882 0.307836}
@@ -19390,13 +19187,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.928491 -0.140937 -0.343573}
       <VertexRef> { 828 829 830 831 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.703650 -0.149254 -0.694694}
@@ -19404,13 +19199,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.519930 -0.259707 0.813772}
       <VertexRef> { 836 837 838 839 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.433379 -0.158070 -0.887241}
@@ -19418,13 +19211,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.934853 -0.176882 0.307836}
       <VertexRef> { 844 845 846 847 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.381542 -0.091247 -0.919837}
@@ -19432,13 +19223,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.929412 -0.083050 -0.359578}
       <VertexRef> { 852 853 854 855 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.545104 -0.217853 0.809569}
@@ -19446,13 +19235,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.929412 -0.083050 -0.359578}
       <VertexRef> { 860 861 862 863 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.738951 -0.080995 -0.668873}
@@ -19460,13 +19247,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.921168 -0.121036 0.369866}
       <VertexRef> { 868 869 870 871 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.738951 -0.080995 -0.668873}
@@ -19474,13 +19259,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.545104 -0.217853 0.809569}
       <VertexRef> { 876 877 878 879 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.381542 -0.091247 -0.919837}
@@ -19488,13 +19271,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.921168 -0.121036 0.369866}
       <VertexRef> { 884 885 886 887 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.763623 -0.297714 0.572927}
@@ -19502,13 +19283,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.918512 -0.342627 0.197339}
       <VertexRef> { 892 893 894 895 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.002841 -0.401262 -0.915959}
@@ -19516,13 +19295,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.918512 -0.342627 0.197338}
       <VertexRef> { 900 901 902 903 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.350772 -0.324787 0.878335}
@@ -19530,13 +19307,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.904102 -0.377790 -0.199687}
       <VertexRef> { 908 909 910 911 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.350772 -0.324787 0.878335}
@@ -19544,13 +19319,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.002841 -0.401262 -0.915959}
       <VertexRef> { 916 917 918 919 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.763623 -0.297714 0.572927}
@@ -19558,13 +19331,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.904102 -0.377790 -0.199687}
       <VertexRef> { 924 925 926 927 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.212534 -0.229923 -0.949718}
@@ -19572,13 +19343,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.896301 -0.207986 -0.391646}
       <VertexRef> { 932 933 934 935 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.520446 -0.298711 0.799942}
@@ -19586,13 +19355,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.896301 -0.207986 -0.391646}
       <VertexRef> { 940 941 942 943 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.801748 -0.219337 -0.555960}
@@ -19600,13 +19367,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.862921 -0.254631 0.436498}
       <VertexRef> { 948 949 950 951 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.801748 -0.219337 -0.555961}
@@ -19614,13 +19379,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.520446 -0.298711 0.799942}
       <VertexRef> { 956 957 958 959 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.212534 -0.229923 -0.949718}
@@ -19628,13 +19391,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.862921 -0.254631 0.436499}
       <VertexRef> { 964 965 966 967 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.147101 -0.930202 -0.336281}
@@ -19642,13 +19403,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.334114 -0.929701 -0.154998}
       <VertexRef> { 972 973 974 975 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.085180 -0.963921 0.252190}
@@ -19656,13 +19415,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.334113 -0.929701 -0.154998}
       <VertexRef> { 980 981 982 983 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.230794 -0.928316 -0.291485}
@@ -19670,13 +19427,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.272608 -0.955528 0.112478}
       <VertexRef> { 988 989 990 991 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.230794 -0.928316 -0.291485}
@@ -19684,13 +19439,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.085180 -0.963921 0.252190}
       <VertexRef> { 996 997 998 999 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.147101 -0.930202 -0.336281}
@@ -19698,13 +19451,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.272608 -0.955528 0.112478}
       <VertexRef> { 1004 1005 1006 1007 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.038809 -0.992344 -0.117252}
@@ -19712,13 +19463,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.083233 -0.994445 -0.064438}
       <VertexRef> { 1011 1012 1013 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.006486 -0.997939 0.063849}
@@ -19726,13 +19475,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.083233 -0.994445 -0.064438}
       <VertexRef> { 1017 1018 1019 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.046128 -0.992475 -0.113426}
@@ -19740,13 +19487,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.060294 -0.997879 0.024520}
       <VertexRef> { 1023 1024 1025 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.046128 -0.992475 -0.113426}
@@ -19754,13 +19499,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.006486 -0.997938 0.063849}
       <VertexRef> { 1029 1030 1031 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.038809 -0.992344 -0.117252}
@@ -19768,13 +19511,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.060294 -0.997879 0.024520}
       <VertexRef> { 1035 1036 1037 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.999570 -0.011249 -0.027071}
@@ -19782,13 +19523,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.999570 -0.011249 -0.027071}
       <VertexRef> { 1042 1043 1044 1045 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.349590 -0.904263 0.245144}
@@ -19796,13 +19535,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.349648 0.929909 -0.114082}
       <VertexRef> { 1050 1051 1052 1053 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.349590 -0.904263 0.245144}
@@ -19810,13 +19547,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.349651 0.929909 -0.114081}
       <VertexRef> { 1058 1059 1060 1061 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.392843 0.911315 0.123202}
@@ -19824,13 +19559,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.994237 -0.022446 0.104825}
       <VertexRef> { 1066 1067 1068 1069 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.392843 0.911315 0.123202}
@@ -19838,13 +19571,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.994237 -0.022446 0.104825}
       <VertexRef> { 1074 1075 1076 1077 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.432978 -0.869149 0.238976}
@@ -19852,13 +19583,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.432978 -0.869150 0.238976}
       <VertexRef> { 1082 1083 1084 1085 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
@@ -19866,13 +19595,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.381113 -0.914708 0.134394}
       <VertexRef> { 1090 1091 1092 1093 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.381113 -0.914708 0.134394}
@@ -19880,13 +19607,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
       <VertexRef> { 1098 1099 1100 1101 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
@@ -19894,13 +19619,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.348672 0.866806 0.356477}
       <VertexRef> { 1106 1107 1108 1109 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.361911 -0.931394 0.039064}
@@ -19908,13 +19631,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.280712 0.958386 -0.051933}
       <VertexRef> { 1114 1115 1116 1117 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.997696 0.018794 -0.065187}
@@ -19922,13 +19643,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.280712 0.958386 -0.051933}
       <VertexRef> { 1122 1123 1124 1125 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.997696 0.018794 -0.065187}
@@ -19936,13 +19655,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.361911 -0.931394 0.039064}
       <VertexRef> { 1130 1131 1132 1133 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.992716 0.018461 -0.119056}
@@ -19950,13 +19667,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.298418 0.885118 -0.357090}
       <VertexRef> { 1138 1139 1140 1141 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.992716 0.018461 -0.119056}
@@ -19964,13 +19679,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.388631 -0.770529 -0.505223}
       <VertexRef> { 1146 1147 1148 1149 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.388631 -0.770529 -0.505223}
@@ -19978,13 +19691,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.298418 0.885118 -0.357090}
       <VertexRef> { 1154 1155 1156 1157 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.361426 -0.920125 0.150799}
@@ -19992,13 +19703,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.361426 -0.920125 0.150799}
       <VertexRef> { 1162 1163 1164 1165 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.268015 0.961162 0.065842}
@@ -20006,13 +19715,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
       <VertexRef> { 1170 1171 1172 1173 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.268015 0.961162 0.065842}
@@ -20020,13 +19727,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
       <VertexRef> { 1178 1179 1180 1181 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.927145 0.259937 -0.269880}
@@ -20034,13 +19739,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.940884 0.014313 -0.338425}
       <VertexRef> { 1186 1187 1188 1189 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.239854 0.186154 0.952794}
@@ -20048,13 +19751,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.940885 0.014313 -0.338425}
       <VertexRef> { 1194 1195 1196 1197 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.326706 -0.192335 0.925349}
@@ -20062,13 +19763,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.259989 0.199193 -0.944843}
       <VertexRef> { 1202 1203 1204 1205 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.992647 0.001742 -0.121032}
@@ -20076,13 +19775,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.335001 -0.817597 -0.468305}
       <VertexRef> { 1210 1211 1212 1213 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.335001 -0.817597 -0.468305}
@@ -20090,13 +19787,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.282096 0.797433 -0.533406}
       <VertexRef> { 1218 1219 1220 1221 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.992647 0.001742 -0.121032}
@@ -20104,13 +19799,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.282096 0.797433 -0.533406}
       <VertexRef> { 1226 1227 1228 1229 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.013277 -0.003038 -0.999907}
@@ -20118,13 +19811,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.013277 -0.003038 -0.999907}
       <VertexRef> { 1234 1235 1236 1237 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.928993 0.230856 0.289272}
@@ -20132,13 +19823,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.934807 -0.027847 0.354062}
       <VertexRef> { 1242 1243 1244 1245 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.239854 0.186154 0.952794}
@@ -20146,13 +19835,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.934807 -0.027847 0.354062}
       <VertexRef> { 1250 1251 1252 1253 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.259989 0.199193 -0.944843}
@@ -20160,13 +19847,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.926823 -0.092150 0.364015}
       <VertexRef> { 1258 1259 1260 1261 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.928993 0.230856 0.289271}
@@ -20174,13 +19859,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.259650 0.317305 -0.912085}
       <VertexRef> { 1266 1267 1268 1269 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.927145 0.259937 -0.269879}
@@ -20188,13 +19871,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.259650 0.317305 -0.912085}
       <VertexRef> { 1274 1275 1276 1277 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.953555 0.025548 -0.300134}
@@ -20202,13 +19883,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.954236 -0.025338 0.297979}
       <VertexRef> { 1282 1283 1284 1285 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.245816 -0.082072 0.965836}
@@ -20216,13 +19895,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.954236 -0.025338 0.297979}
       <VertexRef> { 1290 1291 1292 1293 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.227384 0.082652 -0.970291}
@@ -20230,13 +19907,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.245815 -0.082072 0.965836}
       <VertexRef> { 1298 1299 1300 1301 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.227384 0.082652 -0.970291}
@@ -20244,13 +19919,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.953555 0.025548 -0.300134}
       <VertexRef> { 1306 1307 1308 1309 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.319973 -0.945156 -0.065562}
@@ -20258,13 +19931,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.090565 -0.987250 0.130900}
       <VertexRef> { 1314 1315 1316 1317 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.246428 -0.311266 -0.917816}
@@ -20272,13 +19943,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.209247 -0.212116 0.954580}
       <VertexRef> { 1322 1323 1324 1325 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.985690 -0.014753 0.167921}
@@ -20286,13 +19955,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.209247 -0.212116 0.954580}
       <VertexRef> { 1330 1331 1332 1333 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.701080 -0.699482 -0.138603}
@@ -20300,13 +19967,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.979387 0.000000 -0.201991}
       <VertexRef> { 1338 1339 1340 1341 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.641205 0.735084 -0.220243}
@@ -20314,13 +19979,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.701080 -0.699482 -0.138603}
       <VertexRef> { 1346 1347 1348 1349 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.641205 0.735084 -0.220243}
@@ -20328,13 +19991,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.979387 0.000000 -0.201991}
       <VertexRef> { 1354 1355 1356 1357 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.985690 -0.014753 0.167921}
@@ -20342,13 +20003,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.090565 -0.987250 0.130900}
       <VertexRef> { 1362 1363 1364 1365 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.319973 -0.945156 -0.065562}
@@ -20356,13 +20015,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.961176 -0.038556 -0.273230}
       <VertexRef> { 1370 1371 1372 1373 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.400152 -0.879681 -0.256982}
@@ -20370,13 +20027,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.122499 -0.821681 -0.556627}
       <VertexRef> { 1378 1379 1380 1381 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.122499 -0.821681 -0.556627}
@@ -20384,13 +20039,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.400152 -0.879681 -0.256982}
       <VertexRef> { 1386 1387 1388 1389 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.235246 -0.004772 -0.971924}
@@ -20398,13 +20051,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
       <VertexRef> { 1394 1395 1396 1397 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
@@ -20412,13 +20063,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.302670 0.129768 -0.944220}
       <VertexRef> { 1402 1403 1404 1405 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.302670 0.129768 -0.944220}
@@ -20426,13 +20075,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.348672 0.866806 0.356477}
       <VertexRef> { 1410 1411 1412 1413 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
@@ -20440,13 +20087,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.157114 0.580617 -0.798873}
       <VertexRef> { 1418 1419 1420 1421 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.235246 -0.004772 -0.971924}
@@ -20454,13 +20099,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
       <VertexRef> { 1426 1427 1428 1429 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.251406 0.151060 0.956021}
@@ -20468,13 +20111,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.251406 0.151060 0.956021}
       <VertexRef> { 1434 1435 1436 1437 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.999628 0.011881 0.024563}
@@ -20482,13 +20123,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.999628 0.011881 0.024563}
       <VertexRef> { 1442 1443 1444 1445 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.131623 -0.561980 0.816611}
@@ -20496,13 +20135,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.131623 -0.561980 0.816611}
       <VertexRef> { 1450 1451 1452 1453 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
@@ -20510,13 +20147,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.157114 0.580617 -0.798873}
       <VertexRef> { 1458 1459 1460 1461 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.250685 -0.905415 -0.342609}
@@ -20524,13 +20159,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.020836 0.987461 -0.156483}
       <VertexRef> { 1466 1467 1468 1469 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.029175 -0.983641 0.177760}
@@ -20538,13 +20171,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.029175 -0.983641 0.177760}
       <VertexRef> { 1474 1475 1476 1477 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.020836 0.987461 -0.156483}
@@ -20552,13 +20183,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.250701 -0.905413 -0.342603}
       <VertexRef> { 1482 1483 1484 1485 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.136335 -0.300068 -0.944125}
@@ -20566,13 +20195,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.171332 0.936619 -0.305597}
       <VertexRef> { 1490 1491 1492 1493 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.136379 -0.300079 -0.944115}
@@ -20580,13 +20207,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.171329 0.936622 -0.305591}
       <VertexRef> { 1498 1499 1500 1501 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.999999 0.001465 0.000890}
@@ -20594,13 +20219,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.097175 0.851513 0.515250}
       <VertexRef> { 1506 1507 1508 1509 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.154544 0.963740 0.217534}
@@ -20608,13 +20231,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000963 0.000281}
       <VertexRef> { 1514 1515 1516 1517 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.999999 0.000957 0.000294}
@@ -20622,13 +20243,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.154544 0.963741 0.217532}
       <VertexRef> { 1522 1523 1524 1525 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.083863 -0.644161 -0.760279}
@@ -20636,13 +20255,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.083873 -0.644164 -0.760275}
       <VertexRef> { 1530 1531 1532 1533 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.097175 0.851514 0.515249}
@@ -20650,13 +20267,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.999999 0.001459 0.000901}
       <VertexRef> { 1538 1539 1540 1541 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.176070 -0.834138 -0.522698}
@@ -20664,13 +20279,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.176055 -0.834139 -0.522701}
       <VertexRef> { 1546 1547 1548 1549 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.032303 0.686888 -0.726045}
@@ -20678,13 +20291,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.032298 0.686892 -0.726042}
       <VertexRef> { 1554 1555 1556 1557 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.029361 0.730442 0.682343}
@@ -20692,13 +20303,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.996441 0.056439 -0.062607}
       <VertexRef> { 1562 1563 1564 1565 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.029361 0.730442 0.682343}
@@ -20706,13 +20315,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.996442 0.056427 -0.062597}
       <VertexRef> { 1570 1571 1572 1573 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
@@ -20720,13 +20327,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
       <VertexRef> { 1578 1579 1580 1581 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
@@ -20734,13 +20339,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
       <VertexRef> { 1586 1587 1588 1589 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.398281 0.917264 0.000000}
@@ -20748,13 +20351,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.398281 0.917264 0.000000}
       <VertexRef> { 1594 1595 1596 1597 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.383563 -0.923515 0.000000}
@@ -20762,13 +20363,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.383563 -0.923515 0.000000}
       <VertexRef> { 1602 1603 1604 1605 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.001126 0.000000 -0.999999}
@@ -20776,13 +20375,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.003335 -0.002884 -0.999990}
       <VertexRef> { 1610 1611 1612 1613 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.001126 0.000000 -0.999999}
@@ -20790,13 +20387,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.003290 0.002861 -0.999991}
       <VertexRef> { 1618 1619 1620 1621 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.001126 0.000000 -0.999999}
@@ -20804,13 +20399,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.003290 0.002861 -0.999990}
       <VertexRef> { 1626 1627 1628 1629 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.001126 0.000000 -0.999999}
@@ -20818,13 +20411,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.003335 -0.002884 -0.999990}
       <VertexRef> { 1634 1635 1636 1637 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
@@ -20832,13 +20423,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.398280 0.917264 0.000000}
       <VertexRef> { 1642 1643 1644 1645 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
@@ -20846,13 +20435,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.398280 0.917264 0.000000}
       <VertexRef> { 1650 1651 1652 1653 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
@@ -20860,13 +20447,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.383561 -0.923515 0.000000}
       <VertexRef> { 1658 1659 1660 1661 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
@@ -20874,13 +20459,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.383561 -0.923515 0.000000}
       <VertexRef> { 1666 1667 1668 1669 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.061960 0.000000 0.998079}
@@ -20888,13 +20471,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.025560 0.048450 0.998498}
       <VertexRef> { 1674 1675 1676 1677 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.061960 0.000000 0.998079}
@@ -20902,13 +20483,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.024807 -0.048838 0.998499}
       <VertexRef> { 1682 1683 1684 1685 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.061960 0.000000 0.998079}
@@ -20916,13 +20495,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.024807 -0.048838 0.998499}
       <VertexRef> { 1690 1691 1692 1693 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.061960 0.000000 0.998079}
@@ -20930,13 +20507,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.025560 0.048450 0.998498}
       <VertexRef> { 1698 1699 1700 1701 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
@@ -20944,13 +20519,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.383562 -0.923515 0.000000}
       <VertexRef> { 1706 1707 1708 1709 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
@@ -20958,13 +20531,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.383562 -0.923515 0.000000}
       <VertexRef> { 1714 1715 1716 1717 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-1.000000 0.000000 0.000000}
@@ -20972,13 +20543,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.398281 0.917263 0.000000}
       <VertexRef> { 1722 1723 1724 1725 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {1.000000 0.000000 0.000000}
@@ -20986,13 +20555,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.398281 0.917263 0.000000}
       <VertexRef> { 1730 1731 1732 1733 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.136306 -0.110133 -0.984526}
@@ -21000,13 +20567,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.302938 -0.041649 -0.952100}
       <VertexRef> { 1738 1739 1740 1741 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.136306 -0.110133 -0.984526}
@@ -21014,13 +20579,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.308191 0.064666 -0.949124}
       <VertexRef> { 1746 1747 1748 1749 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.150483 0.209012 -0.966265}
@@ -21028,13 +20591,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.308191 0.064666 -0.949124}
       <VertexRef> { 1754 1755 1756 1757 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.150483 0.209012 -0.966265}
@@ -21042,13 +20603,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.302938 -0.041649 -0.952100}
       <VertexRef> { 1762 1763 1764 1765 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.775784 0.242720 -0.582449}
@@ -21056,13 +20615,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.550416 0.728259 -0.408266}
       <VertexRef> { 1770 1771 1772 1773 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.775784 0.242720 -0.582449}
@@ -21070,13 +20627,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.550416 0.728259 -0.408266}
       <VertexRef> { 1778 1779 1780 1781 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.779277 -0.129073 -0.613244}
@@ -21084,13 +20639,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.596969 -0.385871 -0.703371}
       <VertexRef> { 1786 1787 1788 1789 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.779277 -0.129073 -0.613244}
@@ -21098,13 +20651,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.596969 -0.385871 -0.703371}
       <VertexRef> { 1794 1795 1796 1797 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.925831 0.318976 0.202711}
@@ -21112,13 +20663,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.544462 0.812647 0.207763}
       <VertexRef> { 1802 1803 1804 1805 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.952258 -0.180400 0.246296}
@@ -21126,13 +20675,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.699092 -0.494608 0.516366}
       <VertexRef> { 1810 1811 1812 1813 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.952258 -0.180400 0.246296}
@@ -21140,13 +20687,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.699092 -0.494608 0.516366}
       <VertexRef> { 1818 1819 1820 1821 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.925831 0.318976 0.202711}
@@ -21154,13 +20699,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.544462 0.812647 0.207763}
       <VertexRef> { 1826 1827 1828 1829 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.295462 -0.076079 0.952321}
@@ -21168,13 +20711,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.164434 -0.139405 0.976488}
       <VertexRef> { 1834 1835 1836 1837 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.295462 -0.076079 0.952321}
@@ -21182,13 +20723,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.164434 -0.139405 0.976488}
       <VertexRef> { 1842 1843 1844 1845 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.316242 0.104638 0.942890}
@@ -21196,13 +20735,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.189464 0.291307 0.937680}
       <VertexRef> { 1850 1851 1852 1853 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.316242 0.104638 0.942890}
@@ -21210,13 +20747,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.189464 0.291307 0.937680}
       <VertexRef> { 1858 1859 1860 1861 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.079197 -0.044803 0.995852}
@@ -21224,13 +20759,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.065280 -0.069282 0.995459}
       <VertexRef> { 1865 1866 1867 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.084716 0.027497 0.996026}
@@ -21238,13 +20771,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.052935 0.073094 0.995919}
       <VertexRef> { 1871 1872 1873 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.084716 0.027497 0.996026}
@@ -21252,13 +20783,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.052935 0.073094 0.995919}
       <VertexRef> { 1877 1878 1879 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.079197 -0.044803 0.995852}
@@ -21266,13 +20795,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.065280 -0.069282 0.995459}
       <VertexRef> { 1883 1884 1885 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.926823 -0.092150 0.364015}
@@ -21280,13 +20807,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.326706 -0.192335 0.925349}
       <VertexRef> { 1890 1891 1892 1893 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.940043 0.051433 -0.337155}
@@ -21294,13 +20819,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.940043 0.051433 -0.337155}
       <VertexRef> { 1898 1899 1900 1901 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.010132 0.987727 0.155859}
@@ -21308,13 +20831,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.005127 0.990883 0.134630}
       <VertexRef> { 1906 1907 1908 1909 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.000876 0.991822 0.127623}
@@ -21322,13 +20843,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.005127 0.990883 0.134630}
       <VertexRef> { 1914 1915 1916 1917 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.000876 0.991822 0.127623}
@@ -21336,13 +20855,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.010132 0.987727 0.155859}
       <VertexRef> { 1922 1923 1924 1925 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.014802 0.988971 0.147367}
@@ -21350,13 +20867,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.014802 0.988971 0.147367}
       <VertexRef> { 1930 1931 1932 1933 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.335028 -0.144357 0.931084}
@@ -21364,13 +20879,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.958460 0.042617 -0.282025}
       <VertexRef> { 1938 1939 1940 1941 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.335028 -0.144357 0.931084}
@@ -21378,13 +20891,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.941476 -0.049278 0.333459}
       <VertexRef> { 1946 1947 1948 1949 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.331575 0.152772 -0.930977}
@@ -21392,13 +20903,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.941476 -0.049278 0.333459}
       <VertexRef> { 1954 1955 1956 1957 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.331575 0.152772 -0.930977}
@@ -21406,13 +20915,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.958460 0.042617 -0.282025}
       <VertexRef> { 1962 1963 1964 1965 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.032056 -0.983827 -0.176228}
@@ -21420,13 +20927,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.007975 -0.989859 -0.141827}
       <VertexRef> { 1970 1971 1972 1973 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.032056 -0.983827 -0.176228}
@@ -21434,13 +20939,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.007975 -0.989859 -0.141827}
       <VertexRef> { 1978 1979 1980 1981 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.032242 -0.984789 -0.170736}
@@ -21448,13 +20951,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.012324 -0.981062 -0.193300}
       <VertexRef> { 1986 1987 1988 1989 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.032242 -0.984789 -0.170736}
@@ -21462,13 +20963,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.012324 -0.981062 -0.193300}
       <VertexRef> { 1994 1995 1996 1997 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.335690 -0.136108 0.932087}
@@ -21476,13 +20975,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.959364 0.040756 -0.279213}
       <VertexRef> { 2002 2003 2004 2005 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.335690 -0.136108 0.932087}
@@ -21490,13 +20987,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.940370 -0.049149 0.336583}
       <VertexRef> { 2010 2011 2012 2013 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.332650 0.136223 -0.933160}
@@ -21504,13 +20999,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.940370 -0.049149 0.336583}
       <VertexRef> { 2018 2019 2020 2021 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.332650 0.136223 -0.933160}
@@ -21518,13 +21011,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.959364 0.040756 -0.279213}
       <VertexRef> { 2026 2027 2028 2029 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.178784 0.977460 0.112286}
@@ -21532,13 +21023,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.071159 0.931336 0.357141}
       <VertexRef> { 2034 2035 2036 2037 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.177018 0.954004 0.241951}
@@ -21546,13 +21035,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.056298 0.998414 -0.000967}
       <VertexRef> { 2042 2043 2044 2045 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.177018 0.954004 0.241951}
@@ -21560,13 +21047,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.056298 0.998414 -0.000967}
       <VertexRef> { 2050 2051 2052 2053 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.178784 0.977460 0.112286}
@@ -21574,13 +21059,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.071159 0.931336 0.357141}
       <VertexRef> { 2058 2059 2060 2061 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.247391 0.553144 0.795506}
@@ -21588,13 +21071,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.709428 0.698585 -0.093219}
       <VertexRef> { 2066 2067 2068 2069 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.247391 0.553144 0.795506}
@@ -21602,13 +21083,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.682918 0.631006 0.368041}
       <VertexRef> { 2074 2075 2076 2077 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.242664 0.784643 -0.570482}
@@ -21616,13 +21095,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.682919 0.631006 0.368041}
       <VertexRef> { 2082 2083 2084 2085 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.242664 0.784643 -0.570482}
@@ -21630,13 +21107,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.709428 0.698585 -0.093219}
       <VertexRef> { 2090 2091 2092 2093 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.959382 0.049173 -0.277792}
@@ -21644,13 +21119,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.335726 -0.164184 0.927541}
       <VertexRef> { 2098 2099 2100 2101 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.940448 -0.059252 0.334734}
@@ -21658,13 +21131,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.332633 0.164377 -0.928620}
       <VertexRef> { 2106 2107 2108 2109 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.940448 -0.059252 0.334734}
@@ -21672,13 +21143,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.332633 0.164377 -0.928620}
       <VertexRef> { 2114 2115 2116 2117 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.959382 0.049172 -0.277792}
@@ -21686,13 +21155,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.335726 -0.164184 0.927541}
       <VertexRef> { 2122 2123 2124 2125 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.700554 -0.702144 0.127350}
@@ -21700,13 +21167,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.247460 -0.548384 -0.798773}
       <VertexRef> { 2130 2131 2132 2133 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.700554 -0.702144 0.127350}
@@ -21714,13 +21179,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.247460 -0.548384 -0.798773}
       <VertexRef> { 2138 2139 2140 2141 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.718439 -0.618133 -0.318992}
@@ -21728,13 +21191,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.250152 -0.772989 0.583019}
       <VertexRef> { 2146 2147 2148 2149 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.718440 -0.618133 -0.318992}
@@ -21742,13 +21203,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.250152 -0.772989 0.583019}
       <VertexRef> { 2154 2155 2156 2157 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.160190 -0.979430 -0.122705}
@@ -21756,13 +21215,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.057761 -0.946280 -0.318147}
       <VertexRef> { 2162 2163 2164 2165 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.165248 -0.963098 -0.212452}
@@ -21770,13 +21227,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.053794 -0.998468 -0.012938}
       <VertexRef> { 2170 2171 2172 2173 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.165248 -0.963098 -0.212452}
@@ -21784,13 +21239,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.053794 -0.998468 -0.012938}
       <VertexRef> { 2178 2179 2180 2181 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.160190 -0.979430 -0.122705}
@@ -21798,13 +21251,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.057761 -0.946280 -0.318147}
       <VertexRef> { 2186 2187 2188 2189 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.071912 -0.979647 -0.187407}
@@ -21812,13 +21263,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.020817 -0.994145 -0.106030}
       <VertexRef> { 2193 2194 2195 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.071912 -0.979647 -0.187407}
@@ -21826,13 +21275,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.020817 -0.994145 -0.106030}
       <VertexRef> { 2199 2200 2201 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.070146 -0.985126 -0.156862}
@@ -21840,13 +21287,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.026333 -0.972328 -0.232132}
       <VertexRef> { 2205 2206 2207 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.070146 -0.985126 -0.156862}
@@ -21854,13 +21299,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.026333 -0.972328 -0.232132}
       <VertexRef> { 2211 2212 2213 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.165359 -0.221887 -0.960949}
@@ -21868,13 +21311,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.276110 0.000000 -0.961126}
       <VertexRef> { 2217 2218 2219 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.165359 -0.221887 -0.960949}
@@ -21882,13 +21323,11 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.152907 0.153432 -0.976257}
       <VertexRef> { 2223 2224 2225 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.210989 -0.185087 -0.959805}
@@ -21896,20 +21335,17 @@
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.152907 0.153432 -0.976257}
       <VertexRef> { 2229 2230 2231 <Ref> { Marker }}
     }
     <Polygon> {
       <TRef> { Marker }
-      <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {0.210989 -0.185087 -0.959805}
       <VertexRef> { 2232 2233 2234 <Ref> { Marker }}
     }
     <Polygon> {
-      <TRef> { Marker }
       <TRef> { Marker }
       <MRef> { Marker }
       <Normal> {-0.276110 0.000000 -0.961126}
