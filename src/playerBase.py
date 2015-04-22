@@ -4,6 +4,8 @@ from panda3d.core import CollisionSphere
 from panda3d.core import CollisionRay
 from panda3d.core import CollisionNode
 from panda3d.core import CollisionHandlerFloor
+from panda3d.core import TextNode
+from direct.gui.DirectGui import DirectLabel
 from direct.actor.Actor import Actor
 from gun import Gun
 
@@ -12,6 +14,7 @@ class PlayerBase(DirectObject):
         # Player Model setup
         self.player = Actor("Player",
                             {"Run":"Player-Run",
+                            "Sidestep":"Player-Sidestep",
                             "Idle":"Player-Idle"})
         self.player.setBlend(frameBlend = True)
         self.player.setPos(0, 0, 0)
@@ -20,6 +23,18 @@ class PlayerBase(DirectObject):
 
         # team
         self.playerTeam = ""
+
+
+        self.lblTeam = DirectLabel(
+            scale = 1,
+            pos = (0, 0, 3),
+            frameColor = (0, 0, 0, 0),
+            text = "TEAM",
+            text_align = TextNode.ACenter,
+            text_fg = (0,0,0,1))
+        self.lblTeam.reparentTo(self.player)
+        self.lblTeam.setBillboardPointEye()
+
 
         # basic player values
         self.maxHits = 1
@@ -45,7 +60,7 @@ class PlayerBase(DirectObject):
 
         # Player weapon setup
         self.gunAttach = self.player.exposeJoint(None, "modelRoot", "WeaponSlot_R")
-        self.color = LPoint3f(0, 0, 1)
+        self.color = LPoint3f(1, 1, 1)
         self.gun = Gun(id(self))
         self.gun.reparentTo(self.gunAttach)
         self.gun.hide()
@@ -86,6 +101,18 @@ class PlayerBase(DirectObject):
 
     def setPos(self, pos):
         self.player.setPos(pos)
+
+    def setColor(self, color=LPoint3f(0,0,0)):
+        self.color = color
+        self.gun.setColor(color)
+        #self.player.setColor(color)
+        c = (color[0], color[1], color[2], 1.0)
+        self.lblTeam["text_fg"] = c
+
+    def setTeam(self, team):
+        self.playerTeam = team
+        self.lblTeam["text"] = team
+
 
     def shoot(self, shotVec=None):
         self.gun.shoot(shotVec)
@@ -133,19 +160,33 @@ class PlayerBase(DirectObject):
             self.TorsorControl.setP(self.AIP)
             self.player.setH(self.AIH)
 
+        forward =  self.keyMap["forward"] != 0
+        backward = self.keyMap["backward"] != 0
+
         if self.keyMap["left"] != 0:
+            if self.player.getCurrentAnim() != "Sidestep" and not (forward or backward):
+                self.player.loop("Sidestep")
+                self.player.setPlayRate(5, "Sidestep")
             self.player.setX(self.player, self.movespeed * globalClock.getDt())
-        if self.keyMap["right"] != 0:
+        elif self.keyMap["right"] != 0:
+            if self.player.getCurrentAnim() != "Sidestep" and not (forward or backward):
+                self.player.loop("Sidestep")
+                self.player.setPlayRate(5, "Sidestep")
             self.player.setX(self.player, -self.movespeed * globalClock.getDt())
-        if self.keyMap["forward"] != 0:
+        else:
+            self.player.stop("Sidestep")
+        if forward:
             if self.player.getCurrentAnim() != "Run":
                 self.player.loop("Run")
                 self.player.setPlayRate(5, "Run")
             self.player.setY(self.player, -self.movespeed * globalClock.getDt())
+        elif backward:
+            if self.player.getCurrentAnim() != "Run":
+                self.player.loop("Run")
+                self.player.setPlayRate(-5, "Run")
+            self.player.setY(self.player, self.movespeed * globalClock.getDt())
         else:
             self.player.stop("Run")
-        if self.keyMap["backward"] != 0:
-            self.player.setY(self.player, self.movespeed * globalClock.getDt())
 
         if not (self.keyMap["left"] or self.keyMap["right"] or
                 self.keyMap["forward"] or self.keyMap["backward"] or

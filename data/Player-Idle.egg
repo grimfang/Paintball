@@ -1,6 +1,6 @@
 <CoordinateSystem> { Z-up } 
 <Table> {
-  <Bundle> Cube.003 {
+  <Bundle> Player {
     <Table> "<skeleton>" {
       <Table> Root {
         <Xfm$Anim> xform {
@@ -264,7 +264,7 @@
                   <Scalar> fps { 1 }
                   <Scalar> contents { ijkprhxyz }
                   <V> {
-                    1.000000 1.000000 1.000000 -85.860245 180.000005 -0.000008 0.000000 0.099572 0.154935
+                    1.000000 1.000000 1.000000 -85.048109 -179.999554 0.005221 0.000000 0.100687 0.155017
                   }
                 }
               }

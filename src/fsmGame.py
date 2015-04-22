@@ -10,6 +10,8 @@ from hud import HUD
 from result import Result
 from world import World
 
+from panda3d.core import LPoint3f
+
 class FSMGame(FSM):
     def __init__(self):
         FSM.__init__(self, "FSM-Game")
@@ -33,8 +35,8 @@ class FSMGame(FSM):
         self.player = Player()
         self.player.run()
         self.player.setPos(self.world.getStartPos(1))
-        self.player.playerTeam = "Blue"
-        self.player.color = (0, 0, 1)
+        self.player.setTeam("Yellow")
+        self.player.setColor(LPoint3f(1, 1, 0))
 
         #self.player.setSpectator(self.world.getSpectatorNode())
 
@@ -45,11 +47,11 @@ class FSMGame(FSM):
             self.npcs[i].setPos(self.world.getStartPos(i+2))
             self.npcs[i].setBunker(self.world.getBunker())
             if i < self.numNPCs/2:
-                self.npcs[i].playerTeam = "Blue"
-                self.npcs[i].color = (0, 0, 1)
+                self.npcs[i].setTeam("Yellow")
+                self.npcs[i].setColor(LPoint3f(1, 1, 0))
             else:
-                self.npcs[i].playerTeam = "Yellow"
-                self.npcs[i].color = (1, 1, 0)
+                self.npcs[i].setTeam("Blue")
+                self.npcs[i].setColor(LPoint3f(0, 0, 1))
             self.npcs[i].run()
 
         for i in range(self.numNPCs):
@@ -64,10 +66,13 @@ class FSMGame(FSM):
 
     def exitSingleplayer(self):
         self.player.stop()
-        for i in range(self.numNPCs):
+        for i in range(len(self.npcs)):
             self.npcs[i].stop()
+        self.npcs = []
         self.world.stop()
+        del self.world
         self.gameResult.hide()
+        taskMgr.remove("checkGameOver")
 
     def checkGameOver(self, task):
         if self.player.isOut:
@@ -83,10 +88,14 @@ class FSMGame(FSM):
         if not self.player.isOut:
             teams.append(self.player.playerTeam)
         for npc in self.npcs:
-            if not npc.isOut:
+            if not npc.isOut and not npc.playerTeam in teams:
                 teams.append(npc.playerTeam)
         if len(teams) == 1:
             self.gameResult.setTeam(teams[0])
+            self.gameResult.show()
+            return task.done
+        elif len(teams) == 0:
+            self.gameResult.setTeam("Draw")
             self.gameResult.show()
             return task.done
 

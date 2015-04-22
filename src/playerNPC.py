@@ -100,8 +100,13 @@ class NPC(PlayerBase, FSM):
         self.allEnemies = enemies
 
     def stop(self):
-        self.stopBase()
+        taskMgr.remove("setKey1%d"%id(self))
+        taskMgr.remove("setOOB1%d"%id(self))
+        taskMgr.remove("setKey2%d"%id(self))
+        taskMgr.remove("setKey3%d"%id(self))
+        taskMgr.remove("setOOB2%d"%id(self))
         taskMgr.remove("AI-Task%d" % id(self))
+        self.stopBase()
 
     def gameOver(self):
         self.stop()
@@ -117,15 +122,23 @@ class NPC(PlayerBase, FSM):
             self.trackedEnemy = random.choice(self.allEnemies)
         return self.trackedEnemy.player.getPos()
 
+    def checkEnemyList(self):
+        for enemy in self.allEnemies[:]:
+            if enemy.isOut:
+                self.allEnemies.remove(enemy)
+
     def aiTask(self, task):
         # check the current AI states and switch between them
+
+        self.checkEnemyList()
 
         # get the elapsed time and store it in "elapsed"
         elapsed = globalClock.getDt()
 
         # track a random enemy
-        self.trackedEnemy = random.choice(self.allEnemies)
-        # check if we have a closer enemy which we can directly see
+        if len(self.allEnemies) > 0:
+            self.trackedEnemy = random.choice(self.allEnemies)
+        # TODO: check if we have a closer enemy which we can directly see
 
         if self.state == "DoHide":
             # ceck if the player has reached the hide possition

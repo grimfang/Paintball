@@ -18,6 +18,8 @@ class Player(PlayerBase, DirectObject):
         self.reload()
         # setup the players camera
         self.Eyes = self.player.exposeJoint(None, "modelRoot", "Eyes")
+        camera.setPos(0,0,0)
+        camera.setHpr(0,0,0)
         camera.reparentTo(self.Eyes)
         base.camLens.setFov(90)
         base.camLens.setNear(0.001)
