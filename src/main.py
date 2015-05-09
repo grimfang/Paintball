@@ -1,5 +1,6 @@
 import sys
 from direct.showbase.ShowBase import ShowBase
+from direct.filter.CommonFilters import CommonFilters
 from fsmGame import FSMGame
 from panda3d.physics import ForceNode
 from panda3d.physics import LinearVectorForce
@@ -48,12 +49,21 @@ class Main(ShowBase):
         base.physicpusher.addInPattern("%fn-hit")
         base.pusher = CollisionHandlerPusher()
 
+        # Simple postprocessing by the engine
+        #self.filters = CommonFilters(base.win, base.cam)
+        #self.filters.setCartoonInk(separation=2)
+        #filters.delCartoonInk()
+
         # Initialize game states
         self.fsmGame = FSMGame()
         # Beginn with the menu
         self.fsmGame.request("Menu")
 
         if __debug__:
+            from pandac.PandaModules import WindowProperties
+            from panda3d.core import ConfigVariableInt
+            self.fullscreen = False
+
             def toggleOobe():
                 """Switch between free camera (steering with the mouse) and
                 the camera controled by the game"""
@@ -64,7 +74,20 @@ class Main(ShowBase):
                 APP.render.explore()
             def toggleFullscreen():
                 """Toggles the window between fullscreen and windowed mode"""
-                graphicMgr.setFullscreen(not settings.fullscreen)
+                self.fullscreen = not self.fullscreen
+                props = WindowProperties()
+                if self.fullscreen:
+                    getW = base.pipe.getDisplayWidth
+                    getH = base.pipe.getDisplayHeight
+                    width = getW() if getW() != 0 else 800
+                    height = getH() if getH() != 0 else 600
+                    props.setSize(width, height)
+                else:
+                    sizeProp = ConfigVariableInt("win-size")
+                    props.setSize(sizeProp.getWord(0), sizeProp.getWord(1))
+                props.setFullscreen(self.fullscreen)
+                props.setUndecorated(self.fullscreen)
+                base.win.requestProperties(props)
             def toggleWireframe():
                 """Switch between wired model view and normal view"""
                 base.toggleWireframe()

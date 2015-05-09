@@ -41,17 +41,7 @@ class Player(PlayerBase, DirectObject):
 
     def stop(self):
         self.hud.hide()
-        self.ignore("w")
-        self.ignore("w-up")
-        self.ignore("a")
-        self.ignore("a-up")
-        self.ignore("s")
-        self.ignore("s-up")
-        self.ignore("d")
-        self.ignore("d-up")
-        self.ignore("mouse1")
-
-        self.ignore("GameOver-player%d" % id(self))
+        self.ignoreAll()
         self.stopBase()
 
     def setSpectator(self, cameraPositionNode):

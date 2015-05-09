@@ -76,7 +76,7 @@ class NPC(PlayerBase, FSM):
         # do a step outside the current Bunker and shoot
         pass
 
-    def exitStepOutOfBnker(self):
+    def exitStepOutOfBunker(self):
         # return to the safe bunker position
         pass
 
@@ -129,6 +129,7 @@ class NPC(PlayerBase, FSM):
 
     def aiTask(self, task):
         # check the current AI states and switch between them
+        if self is None: return task.done
 
         self.checkEnemyList()
 
@@ -153,8 +154,8 @@ class NPC(PlayerBase, FSM):
             curPos = self.player.getPos()
             # TODO: Slowly move to that heading value
             self.AIH = self.getDeg(curPos, enemyPos)
-            self.request("StepOutOfBnker")
-        elif self.state == "StepOutOfBnker":
+            self.request("StepOutOfBunker")
+        elif self.state == "StepOutOfBunker":
             if not self.isOutOfBunker and self.stepOutTime <= 0:
                 self.stepOutTime = random.uniform(3.0, 4.5)
 

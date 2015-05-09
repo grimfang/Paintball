@@ -1,10 +1,21 @@
 from direct.showbase.DirectObject import DirectObject
-from panda3d.core import LPoint3f
-from panda3d.core import CollisionSphere
-from panda3d.core import CollisionRay
-from panda3d.core import CollisionNode
-from panda3d.core import CollisionHandlerFloor
-from panda3d.core import TextNode
+from panda3d.core import (
+    LPoint3f,
+    CollisionSphere,
+    CollisionRay,
+    CollisionNode,
+    CollisionHandlerFloor,
+    TextNode,
+    TextureStage,
+    Texture,
+    PNMImage,
+    PNMBrush,
+    PNMPainter,
+    BitMask32,
+    Camera,
+    NodePath,
+    TransparencyAttrib,
+    LColorf)
 from direct.gui.DirectGui import DirectLabel
 from direct.actor.Actor import Actor
 from gun import Gun
@@ -21,10 +32,62 @@ class PlayerBase(DirectObject):
         self.player.reparentTo(render)
         self.player.hide()
 
+        # Create a brush to paint on the texture
+        splat = PNMImage("../data/Splat.png")
+        #splat = splat * LColorf(
+        self.colorBrush = PNMBrush.makeImage(splat, 6, 6, 1)
+
+        CamMask = BitMask32.bit(0)
+        AvBufMask = BitMask32.bit(1)
+        self.avbuf = None
+        if base.win:
+            self.avbufTex = Texture('avbuf')
+            self.avbuf = base.win.makeTextureBuffer('avbuf', 256, 256, self.avbufTex, True)
+            cam = Camera('avbuf')
+            cam.setLens(base.camNode.getLens())
+            self.avbufCam = base.cam.attachNewNode(cam)
+            dr = self.avbuf.makeDisplayRegion()
+            dr.setCamera(self.avbufCam)
+            self.avbuf.setActive(False)
+            self.avbuf.setClearColor((1, 0, 0, 1))
+            cam.setCameraMask(AvBufMask)
+            base.camNode.setCameraMask(CamMask)
+
+            # avbuf renders everything it sees with the gradient texture.
+            tex = loader.loadTexture('gradient.png')
+            np = NodePath('np')
+            np.setTexture(tex, 100)
+            np.setColor((1, 1, 1, 1), 100)
+            np.setColorScaleOff(100)
+            np.setTransparency(TransparencyAttrib.MNone, 100)
+            np.setLightOff(100)
+            cam.setInitialState(np.getState())
+            #render.hide(AvBufMask)
+
+        # Setup a texture stage to paint on the player
+        self.paintTs = TextureStage('paintTs')
+        self.paintTs.setMode(TextureStage.MDecal)
+        self.paintTs.setSort(10)
+        self.paintTs.setPriority(10)
+
+        self.tex = Texture('paint_av_%s'%id(self))
+
+        # Setup a PNMImage that will hold the paintable texture of the player
+        self.imageSizeX = 64
+        self.imageSizeY = 64
+        self.p = PNMImage(self.imageSizeX, self.imageSizeY, 4)
+        self.p.fill(1)
+        self.p.alphaFill(0)
+        self.tex.load(self.p)
+        self.tex.setWrapU(self.tex.WMClamp)
+        self.tex.setWrapV(self.tex.WMClamp)
+
+        # Apply the paintable texture to the avatar
+        self.player.setTexture(self.paintTs, self.tex)
+
         # team
         self.playerTeam = ""
-
-
+        # A lable that will display the players team
         self.lblTeam = DirectLabel(
             scale = 1,
             pos = (0, 0, 3),
@@ -35,9 +98,8 @@ class PlayerBase(DirectObject):
         self.lblTeam.reparentTo(self.player)
         self.lblTeam.setBillboardPointEye()
 
-
         # basic player values
-        self.maxHits = 1
+        self.maxHits = 3
         self.currentHits = 0
         self.isOut = False
 
@@ -92,9 +154,10 @@ class PlayerBase(DirectObject):
         taskMgr.add(self.move, "moveTask%d"%id(self), priority=-4)
 
     def stopBase(self):
+        taskMgr.remove("moveTask%d"%id(self))
+        self.ignoreAll()
         self.gun.remove()
         self.player.delete()
-        taskMgr.remove("moveTask%d"%id(self))
 
     def setKey(self, key, value):
         self.keyMap[key] = value
@@ -105,7 +168,6 @@ class PlayerBase(DirectObject):
     def setColor(self, color=LPoint3f(0,0,0)):
         self.color = color
         self.gun.setColor(color)
-        #self.player.setColor(color)
         c = (color[0], color[1], color[2], 1.0)
         self.lblTeam["text_fg"] = c
 
@@ -128,14 +190,81 @@ class PlayerBase(DirectObject):
         self.winXhalf = window.getXSize() / 2
         self.winYhalf = window.getYSize() / 2
 
-    def hit(self):
-        self.currentHits
-        if self.maxHits >= self.currentHits:
+    def hit(self, entry, color):
+        self.currentHits += 1
+
+        # Create a brush to paint on the texture
+        splat = PNMImage("../data/Splat.png")
+        splat = splat * LColorf(color[0], color[1], color[2], 1.0)
+        self.colorBrush = PNMBrush.makeImage(splat, 6, 6, 1)
+
+        self.paintAvatar(entry)
+
+        if self.currentHits >= self.maxHits:
             base.messenger.send("GameOver-player%d" % id(self))
             self.isOut = True
 
-    def move(self, task):
+    def __paint(self, s, t):
+        """ Paints a point on the avatar at texture coordinates (s, t). """
+        x = (s * self.p.getXSize())
+        y = ((1.0 - t) * self.p.getYSize())
 
+        # Draw in color directly on the avatar
+        p1 = PNMPainter(self.p)
+        p1.setPen(self.colorBrush)
+        p1.drawPoint(x, y)
+
+        self.tex.load(self.p)
+        self.tex.setWrapU(self.tex.WMClamp)
+        self.tex.setWrapV(self.tex.WMClamp)
+
+        self.paintDirty = True
+
+    def paintAvatar(self, entry):
+        """ Paints onto an avatar.  Returns true on success, false on
+        failure (because there are no avatar pixels under the mouse,
+        for instance). """
+
+        # First, we have to render the avatar in its false-color
+        # image, to determine which part of its texture is under the
+        # mouse.
+        if not self.avbuf:
+            return False
+
+        #mpos = base.mouseWatcherNode.getMouse()
+        mpos = entry.getSurfacePoint(self.player)
+        ppos = entry.getSurfacePoint(render)
+
+        self.player.showThrough(BitMask32.bit(1))
+        self.avbuf.setActive(True)
+        base.graphicsEngine.renderFrame()
+        self.player.show(BitMask32.bit(1))
+        self.avbuf.setActive(False)
+
+        # Now we have the rendered image in self.avbufTex.
+        if not self.avbufTex.hasRamImage():
+            print "Weird, no image in avbufTex."
+            return False
+        p = PNMImage()
+        self.avbufTex.store(p)
+        ix = int((1 + mpos.getX()) * p.getXSize() * 0.5)
+        iy = int((1 - mpos.getY()) * p.getYSize() * 0.5)
+        x = 1
+        if ix >= 0 and ix < p.getXSize() and iy >= 0 and iy < p.getYSize():
+            s = p.getBlue(ix, iy)
+            t = p.getGreen(ix, iy)
+            x = p.getRed(ix, iy)
+        if x > 0.5:
+            # Off the avatar.
+            return False
+
+        # At point (s, t) on the avatar's map.
+
+        self.__paint(s, t)
+        return True
+
+    def move(self, task):
+        if self is None: return task.done
         if self.userControlled:
             if not base.mouseWatcherNode.hasMouse(): return task.cont
             self.pointer = base.win.getPointer(0)

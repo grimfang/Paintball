@@ -75,6 +75,7 @@ class FSMGame(FSM):
         taskMgr.remove("checkGameOver")
 
     def checkGameOver(self, task):
+        if self is None: return task.done
         if self.player.isOut:
             self.player.setSpectator(self.world.getSpectatorNode())
         allEnemyNpcsOut = True

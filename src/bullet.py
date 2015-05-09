@@ -74,6 +74,8 @@ class Bullet(DirectObject):
             appendTask=True)
 
     def doRemove(self, task):
+        if self is None: return task.done
+        self.ignoreAll()
         self.bulletNP.removeNode()
         self.bulletAN.getPhysical(0).removeLinearForce(self.lvf)
         return task.done
@@ -81,6 +83,6 @@ class Bullet(DirectObject):
     def bulletHit(self, entry):
         hitPlayerName = entry.getIntoNode().getName()
         if str(self.playerID) not in hitPlayerName:
-            base.messenger.send("Bulet-hit-%s" % hitPlayerName)
+            base.messenger.send("Bulet-hit-%s" % hitPlayerName, [entry, self.color])
             self.bulletNP.removeNode()
             self.bulletAN.getPhysical(0).removeLinearForce(self.lvf)
