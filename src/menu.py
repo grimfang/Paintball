@@ -1,6 +1,8 @@
 from direct.showbase.DirectObject import DirectObject
 from direct.gui.DirectGui import DirectFrame
 from direct.gui.DirectGui import DirectButton
+from direct.gui.DirectLabel import DirectLabel
+from direct.gui.OnscreenImage import OnscreenImage
 from panda3d.core import TextNode
 
 class Menu(DirectObject):
@@ -18,10 +20,30 @@ class Menu(DirectObject):
             frameColor = (0, 0, 0, 0),
             sortOrder = 0)
 
-        self.btnStart = self.createButton("Start", 0.25, self.btnStart_Click)
+        self.background = OnscreenImage("MenuBGLogo.png")
+        self.background.reparentTo(self.frameMain)
+
+        self.nowPlaying = DirectLabel(
+            scale = 0.05,
+            text = "Now Playing: Eraplee Noisewall Orchestra - Bermuda Fire",
+            pos = (base.a2dLeft + 0.025, 0.0, base.a2dBottom + 0.05),
+            text_align = TextNode.ALeft,
+            frameColor = (0, 0, 0, 0),
+            text_fg = (1,1,1,1)
+            )
+        self.nowPlaying.setTransparency(1)
+        self.nowPlaying.reparentTo(self.frameMain)
+
+        maps = loader.loadModel('button_maps.egg')
+        btnGeom = (maps.find('**/ButtonReady'),
+                    maps.find('**/ButtonClick'),
+                    maps.find('**/ButtonRollover'),
+                    maps.find('**/ButtonDisabled'))
+
+        self.btnStart = self.createButton("Start", btnGeom, 0.25, self.btnStart_Click)
         self.btnStart.reparentTo(self.frameMain)
 
-        self.btnQuit = self.createButton("Quit", -0.25, self.btnQuit_Click)
+        self.btnQuit = self.createButton("Quit", btnGeom, -0.25, self.btnQuit_Click)
         self.btnQuit.reparentTo(self.frameMain)
 
         self.recalcAspectRatio(base.win)
@@ -46,7 +68,7 @@ class Menu(DirectObject):
         self.btnStart["text_scale"] = (0.5*screenResMultiplier, 0.5, 0.5)
 
 
-    def createButton(self, text, yPos, command):
+    def createButton(self, text, btnGeom, yPos, command):
         btn = DirectButton(
             scale = (0.25, 0.25, 0.25),
             # some temp text
@@ -55,17 +77,16 @@ class Menu(DirectObject):
             # set the alignment to right
             text_align = TextNode.ACenter,
             # put the text on the right side of the button
-            #text_pos = (4.1, -0.15),
+            text_pos = (0, -0.15),
             # set the text color to black
-            text_fg = (0,0,0,1),
+            text_fg = (1,1,0,1),
+            text_shadow = (0.3, 0.3, 0.1, 1),
+            text_shadowOffset = (0.05, 0.05),
             # set the buttons images
-            #geom = (self.defaultBtnMaps.find("**/button_ready"),
-            #        self.defaultBtnMaps.find("**/button_click"),
-            #        self.defaultBtnMaps.find("**/button_rollover"),
-            #        self.defaultBtnMaps.find("**/button_disabled")),
-            #relief = 1,
-            #frameColor = (0,0,0,0),
-            #pressEffect = False,
+            geom = btnGeom,
+            relief = 1,
+            frameColor = (0,0,0,0),
+            pressEffect = False,
             pos = (0, 0, yPos),
             command = command,
             rolloverSound = None,

@@ -11,6 +11,9 @@ from result import Result
 from world import World
 
 from panda3d.core import LPoint3f
+from panda3d.core import TextNode
+from direct.gui.OnscreenText import OnscreenText
+from direct.interval.IntervalGlobal import Sequence, Func
 
 class FSMGame(FSM):
     def __init__(self):
@@ -19,21 +22,28 @@ class FSMGame(FSM):
         self.gameResult = Result()
         self.numNPCs = 7
 
+        self.musicMenu = loader.loadMusic("Eraplee Noisewall Orchestra - Bermuda Fire.ogg")
+        self.musicMenu.setLoop(True)
+        self.musicGame = loader.loadMusic("Echovolt - Nothing to Fear.ogg")
+        self.musicGame.setLoop(True)
+
     def enterMenu(self):
         helper.show_cursor()
         self.menu.show()
+        self.musicMenu.play()
 
     def exitMenu(self):
         self.menu.hide()
+        self.musicMenu.stop()
 
     def enterSingleplayer(self):
         helper.hide_cursor()
 
+        self.musicGame.play()
+
         self.world = World()
-        self.world.run()
 
         self.player = Player()
-        self.player.run()
         self.player.setPos(self.world.getStartPos(1))
         self.player.setTeam("Yellow")
         self.player.setColor(LPoint3f(1, 1, 0))
@@ -52,7 +62,6 @@ class FSMGame(FSM):
             else:
                 self.npcs[i].setTeam("Blue")
                 self.npcs[i].setColor(LPoint3f(0, 0, 1))
-            self.npcs[i].run()
 
         for i in range(self.numNPCs):
             el = []
@@ -62,9 +71,42 @@ class FSMGame(FSM):
                 if self.npcs[i].playerTeam != self.npcs[j].playerTeam:
                     el.append(self.npcs[j])
             self.npcs[i].setEnemies(el)
-        taskMgr.add(self.checkGameOver, "checkGameOver")
+
+
+        number = OnscreenText(
+            text = "",
+            scale = 0.75,
+            pos = (0, -0.1875),
+            fg = (1,1,1,1),
+            align = TextNode.ACenter)
+
+        def startSingleplayer():
+            number.destroy()
+            self.world.run()
+            self.player.run()
+            for npc in self.npcs:
+                npc.run()
+            taskMgr.add(self.checkGameOver, "checkGameOver")
+
+        def setNumber(num):
+            number["text"] = str(num)
+            number["scale"] = 0.75
+        inter = number.scaleInterval(1.0, 0)
+        # setup a sequence that will count down for us
+        self.countdownSeq = Sequence(
+            Func(setNumber, 3),
+            inter,
+            Func(setNumber, 2),
+            inter,
+            Func(setNumber, 1),
+            inter,
+            Func(setNumber, "GO"),
+            inter,
+            Func(startSingleplayer))
+        self.countdownSeq.start()
 
     def exitSingleplayer(self):
+        self.countdownSeq.finish()
         self.player.stop()
         for i in range(len(self.npcs)):
             self.npcs[i].stop()
@@ -73,6 +115,7 @@ class FSMGame(FSM):
         del self.world
         self.gameResult.hide()
         taskMgr.remove("checkGameOver")
+        self.musicGame.stop()
 
     def checkGameOver(self, task):
         if self is None: return task.done

@@ -29,12 +29,16 @@ class PlayerBase(DirectObject):
                             "Idle":"Player-Idle"})
         self.player.setBlend(frameBlend = True)
         self.player.setPos(0, 0, 0)
+        self.player.pose("Idle", 0)
         self.player.reparentTo(render)
         self.player.hide()
 
+        self.footstep = base.audio3d.loadSfx('footstep.ogg')
+        self.footstep.setLoop(True)
+        base.audio3d.attachSoundToObject(self.footstep, self.player)
+
         # Create a brush to paint on the texture
         splat = PNMImage("../data/Splat.png")
-        #splat = splat * LColorf(
         self.colorBrush = PNMBrush.makeImage(splat, 6, 6, 1)
 
         CamMask = BitMask32.bit(0)
@@ -157,6 +161,8 @@ class PlayerBase(DirectObject):
         taskMgr.remove("moveTask%d"%id(self))
         self.ignoreAll()
         self.gun.remove()
+        self.footstep.stop()
+        base.audio3d.detachSound(self.footstep)
         self.player.delete()
 
     def setKey(self, key, value):
@@ -321,5 +327,8 @@ class PlayerBase(DirectObject):
                 self.keyMap["forward"] or self.keyMap["backward"] or
                 self.player.getCurrentAnim() == "Idle"):
             self.player.loop("Idle")
+            self.footstep.stop()
+        else:
+            self.footstep.play()
 
         return task.cont

@@ -16,19 +16,19 @@ class World():
         self.environ.reparentTo(render)
         self.environ.hide()
 
-        #for i in range(9):
-        #    print "load lamp: Lamp.%03d" % i
-        #    lampPos = self.environ.find("**/Lamp.%03d" % i).getPos()
-        #    plight = PointLight('plight')
-        #    plight.setColor(VBase4(0.2, 0.2, 0.2, 1))
-        #    plnp = render.attachNewNode(plight)
-        #    plnp.setPos(lampPos)
-        #    render.setLight(plnp)
+        for i in range(9):
+            #print "load lamp: Lamp.%03d" % i
+            lampPos = self.environ.find("**/Lamp.%03d" % i).getPos()
+            plight = PointLight('plight')
+            plight.setColor(VBase4(0.2, 0.2, 0.2, 1))
+            plnp = render.attachNewNode(plight)
+            plnp.setPos(lampPos)
+            render.setLight(plnp)
 
-        #self.ambientlight = AmbientLight('ambient light')
-        #self.ambientlight.setColor(VBase4(0.2, 0.2, 0.2, 1))
-        #self.ambientlightnp = render.attachNewNode(self.ambientlight)
-        #render.setLight(self.ambientlightnp)
+        self.ambientlight = AmbientLight('ambient light')
+        self.ambientlight.setColor(VBase4(0.2, 0.2, 0.2, 1))
+        self.ambientlightnp = render.attachNewNode(self.ambientlight)
+        render.setLight(self.ambientlightnp)
 
         #spaceSphere = CollisionInvSphere(0, 0, 0, 200)
         #space = render.attachNewNode(CollisionNode('outerSpaceCollision'))

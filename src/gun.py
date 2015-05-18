@@ -6,6 +6,9 @@ class Gun:
         self.model.setR(-90)
         self.model.setScale(0.5)
 
+        self.shootSound = base.audio3d.loadSfx('shoot.ogg')
+        base.audio3d.attachSoundToObject(self.shootSound, self.model)
+
         self.maxAmmunition = 40
         self.ammunition = 40
 
@@ -19,6 +22,7 @@ class Gun:
 
     def shoot(self, shotVec=None):
         if self.ammunition > 0:
+            self.shootSound.play()
             b = Bullet(self.playerID, self.color)
             pos = self.model.find("**/BulletStart").getPos(render)
             hpr = self.model.getHpr(render)
@@ -36,5 +40,7 @@ class Gun:
         self.model.hide()
 
     def remove(self):
+        self.shootSound.stop()
+        base.audio3d.detachSound(self.shootSound)
         self.model.removeNode()
 

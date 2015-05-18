@@ -32,19 +32,32 @@ class HUD(DirectObject):
             )
         self.ammo.setTransparency(1)
 
+        self.nowPlaying = DirectLabel(
+            scale = 0.05,
+            text = "Now Playing: Echovolt - Nothing to Fear",
+            pos = (base.a2dLeft + 0.025, 0.0, base.a2dTop - 0.05),
+            text_align = TextNode.ALeft,
+            frameColor = (0, 0, 0, 0),
+            text_fg = (1,1,1,1)
+            )
+        self.nowPlaying.setTransparency(1)
+
         self.accept("window-event", self.recalcAspectRatio)
         self.hide()
 
     def show(self):
         self.crosshair.show()
+        self.nowPlaying.show()
         self.ammo.show()
 
     def hide(self):
         self.crosshair.hide()
+        self.nowPlaying.hide()
         self.ammo.hide()
 
     def updateAmmo(self, maxAmmo, ammo):
         self.ammo["text"] = "%02d/%02d" % (maxAmmo, ammo)
 
     def recalcAspectRatio(self, window):
-        self.ammo.setPos(base.a2dLeft + 0.025, 0.0, base.a2dBottom + 0.05),
+        self.ammo.setPos(base.a2dLeft + 0.025, 0.0, base.a2dBottom + 0.05)
+        self.ammo.setPos(base.a2dLeft + 0.025, 0.0, base.a2dTop - 0.05)

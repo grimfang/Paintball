@@ -1,12 +1,14 @@
 import sys
 from direct.showbase.ShowBase import ShowBase
+from direct.showbase import Audio3DManager
 from direct.filter.CommonFilters import CommonFilters
 from fsmGame import FSMGame
-from panda3d.physics import ForceNode
-from panda3d.physics import LinearVectorForce
-from panda3d.physics import PhysicsCollisionHandler
-from panda3d.core import CollisionHandlerPusher
-from panda3d.core import CollisionTraverser
+from panda3d.physics import (ForceNode,
+    LinearVectorForce,
+    PhysicsCollisionHandler)
+from panda3d.core import (CollisionHandlerPusher,
+    CollisionTraverser,
+    Vec4)
 
 from pandac.PandaModules import loadPrcFileData
 # setup some starting vars in the config so the window is hiden at startup
@@ -25,6 +27,8 @@ class Main(ShowBase):
         # disable pandas default mouse-camera controls so we can handle the cam
         # movements by ourself
         self.disableMouse()
+
+        self.win.setClearColor(Vec4(0,0,0,1))
 
         # Event handling
         self.accept("escape", self.escape)
@@ -48,6 +52,11 @@ class Main(ShowBase):
         base.physicpusher = PhysicsCollisionHandler()
         base.physicpusher.addInPattern("%fn-hit")
         base.pusher = CollisionHandlerPusher()
+
+        base.audio3d = Audio3DManager.Audio3DManager(base.sfxManagerList[0], camera)
+
+        # enable shaders
+        #self.render.setShaderAuto()
 
         # Simple postprocessing by the engine
         #self.filters = CommonFilters(base.win, base.cam)
@@ -94,6 +103,8 @@ class Main(ShowBase):
             def showCollisions():
                 """Render collision solids"""
                 base.cTrav.showCollisions(render)
+            from panda3d.core import PStatClient
+            self.accept("f7", PStatClient.connect)
             self.accept("f8", showCollisions)
             self.accept("f9", toggleOobe)
             self.accept("f10", explorer)
