@@ -22,7 +22,7 @@ class Player(PlayerBase, DirectObject):
         camera.setHpr(0,0,0)
         camera.reparentTo(self.Eyes)
         base.camLens.setFov(90)
-        base.camLens.setNear(0.001)
+        base.camLens.setNear(0.005)
 
         # accept the players input
         self.accept("w", self.setKey, ["forward",1])

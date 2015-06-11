@@ -30,8 +30,9 @@ class Bullet(DirectObject):
 
         # setup the collision detection
         # 17.3 mm (0.0173) = size of a .68cal paintball
+        self.bulletColName = "bulletCollision-%02d" % id(self)
         self.bulletSphere = CollisionSphere(0, 0, 0, 0.0173*2)
-        self.bulletCollision = self.bulletANP.attachNewNode(CollisionNode("bulletCollision-%02d" % id(self)))
+        self.bulletCollision = self.bulletANP.attachNewNode(CollisionNode(self.bulletColName))
         self.bulletCollision.node().addSolid(self.bulletSphere)
         #self.bulletCollision.show()
         base.physicpusher.addCollider(self.bulletCollision, self.bulletANP)
@@ -81,8 +82,9 @@ class Bullet(DirectObject):
         return task.done
 
     def bulletHit(self, entry):
-        hitPlayerName = entry.getIntoNode().getName()
-        if str(self.playerID) not in hitPlayerName:
-            base.messenger.send("Bulet-hit-%s" % hitPlayerName, [entry, self.color])
+        hitName = entry.getIntoNode().getName()
+        if str(self.playerID) not in hitName and \
+            self.bulletColName not in hitName:
+            base.messenger.send("Bulet-hit-%s" % hitName, [entry, self.color])
             self.bulletNP.removeNode()
             self.bulletAN.getPhysical(0).removeLinearForce(self.lvf)
