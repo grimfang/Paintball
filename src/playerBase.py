@@ -193,8 +193,8 @@ class PlayerBase(DirectObject):
             self.hud.updateAmmo(self.gun.maxAmmunition, self.gun.ammunition)
 
     def recalcAspectRatio(self, window):
-        self.winXhalf = window.getXSize() / 2
-        self.winYhalf = window.getYSize() / 2
+        self.winXhalf = window.getXSize() // 2
+        self.winYhalf = window.getYSize() // 2
 
     def hit(self, entry, color):
         self.currentHits += 1
