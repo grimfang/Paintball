@@ -137,8 +137,8 @@ class PlayerBase(DirectObject):
         # Player controls setup
         self.keyMap = {"left":0, "right":0, "forward":0, "backward":0}
         # screen sizes
-        self.winXhalf = base.win.getXSize() / 2
-        self.winYhalf = base.win.getYSize() / 2
+        self.winXhalf = base.win.getXSize() // 2
+        self.winYhalf = base.win.getYSize() // 2
         self.mouseSpeedX = 0.1
         self.mouseSpeedY = 0.1
         # AI controllable variables
@@ -249,7 +249,7 @@ class PlayerBase(DirectObject):
 
         # Now we have the rendered image in self.avbufTex.
         if not self.avbufTex.hasRamImage():
-            print "Weird, no image in avbufTex."
+            print("Weird, no image in avbufTex.")
             return False
         p = PNMImage()
         self.avbufTex.store(p)
